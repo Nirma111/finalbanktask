@@ -1,0 +1,123 @@
+body{
+font-family: 'Noto Sans', sans-serif;
+}
+/*** nav bar ***/
+.nav-item {
+  letter-spacing: .2em;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+.dropdown-item {
+  letter-spacing: .2em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* Add these styles to your custom.css file */
+
+
+
+
+
+.my_footer {
+    background-color: #95f6e8;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.my_footer p{
+padding-top:20px;
+font-size: 14px;
+background-color: #f8f9fa;
+padding: 15px 0;
+text-align: center;
+width: 100%;
+position: sticky;
+bottom: 0;
+}
+/*** category ***/
+.my_row_class {
+padding-top: 16px;
+}
+.my_row_class.mx_auto{
+text-color:orange;
+font-size:12px;
+}
+.my_image{
+width: 100%;
+height: auto;
+object-fit:cover;
+}
+.my_title{
+font-size: 20px;
+text-transform: uppercase;
+letter-spacing: .2em
+}
+.my_image_padding{
+padding: 5px;
+}
+/*** category.product ***/
+
+.my_bottom_margin{
+margin-bottom: 15px;
+}
+.card-body h4{
+font-size:14px;
+text-transform:uppercase;
+letter-spacing:.2em;
+}
+/*** product page ***/
+.my_product_row {
+padding-top:15px;
+padding-bottom:20px;
+}
+.my_prod_row.mx_auto {
+text-color: #000;
+font-size:12px;
+text-decoration:none;
+}
+.my_product_image{
+width:200px;
+height:200px;
+}
+.product_title{
+font-size: 16px;
+text-transform: uppercase;
+letter-spacing:.2em;
+padding-top: 15px;
+padding-bottom:10px;
+}
+.my_prod_text{
+padding-right:20px;
+
+}
+.my_search_text {
+ padding-top: 15 px;
+ }
+/*** CART PAGE ***/
+.my_custom_table
+{
+min-width:400px;
+font-size:12px;
+}
+.my_custom_head
+{
+font-size=12px;
+text-transform:uppercase;
+letter-spacing:.2em;
+background-color:#f8f8fa!important;
+}
+.my_custom_icon{
+text-decoration:none;
+}
+.my_custom_a
+{
+text-decoration:none;
+color:#868e96!important;
+}
+.my_custom_button{
+margin-top:5px;
+}

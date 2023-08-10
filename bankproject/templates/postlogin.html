@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+    Your Future in our hands...
+{% endblock %}
+{% block title %}
+Bank Website....
+{% endblock %}
+
+{% block content %}
+
+<button id="showFormBtn">Application Form</button>
+
+<form id="registrationForm" style="display: none;" action="{% url 'bankapp:postlogin' %}" method="POST"  data-branches-url="{% url 'bankapp:get_branches' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById("showFormBtn").addEventListener("click", function() {
+    document.getElementById("registrationForm").style.display = "block";
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+    $("#id_district").change(function () {
+        const url = $("#registrationForm").attr("data-branches-url");
+        const districtId = $(this).val();
+
+        $.ajax({
+            url: url,
+            data: {
+                'district_id': districtId
+            },
+            success: function (data) {
+                let html_data = '<option value="">---------</option>';
+                data.forEach(function (sub_area) {
+                    html_data += `<option value="${sub_area.id}">${sub_area.name}</option>`
+                });
+                console.log(html_data);
+                $("#id_sub_area").html(html_data);
+
+
+            }
+        });
+
+    });
+</script>
+
+
+<div>
+    <br>
+    <br>
+</div>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+
+<a href="{% url 'bankapp:home' %}">Home Page</a>
+<a href="{% url 'depend:login' %}">Log Out</a>
+{% endblock %}

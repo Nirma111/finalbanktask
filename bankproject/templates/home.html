@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    School Store
+{% endblock %}
+{% block title %}
+BANK WEBSITE
+{% endblock %}
+
+{% block content %}
+<div style="backgroung-color:#D1F2EB">
+    <br>
+
+</div>
+<div>
+   <a href="{% url 'depend:login' %}"><button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i> Login</button></a>
+</div>
+<div>
+    <br>
+    <br>
+    <br>
+</div>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+<a href="{% url 'bankapp:home' %}">Home Page</a>
+</div>
+
+{% endblock %}
